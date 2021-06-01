@@ -1,5 +1,5 @@
 clc;
-clear all;
+clear;
 close all;
 M=960;
 N=120;
@@ -17,7 +17,7 @@ title('lena image');
 
 subplot(1,3,2);
 J=imread('w.jpg');
-J=im2bw(J,0.4);
+J=imbinarize(J,0.4);
 J=imresize(J,[120,120]);
 imwrite(J,'target.jpg','jpg');
 imshow(J);
