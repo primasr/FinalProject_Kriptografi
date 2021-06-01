@@ -1,4 +1,4 @@
-clear all;
+clear;
 M=960;
 N=120;
 K=8;
