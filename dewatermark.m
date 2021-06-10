@@ -1,11 +1,14 @@
 clear;
+
 M=960;
 N=120;
 K=8;
+
 A=imread('lena.jpg');
 A=rgb2gray(A);
 A=imresize(A,[960,960]);
 b=imread('watermarked.jpg');
+
 for p=1:N
     for q=1:N
         x=(p-1)*K+1;
@@ -24,7 +27,8 @@ for p=1:N
             end
      end
 end
+
 subplot(2,2,1);
 imshow(W);
-title('the extracted watermark image');
+title('Extracted Watermark Image');
 imwrite(W,'de-watermarked.jpg','jpg');
