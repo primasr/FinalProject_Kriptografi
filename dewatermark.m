@@ -32,3 +32,9 @@ subplot(2,2,1);
 imshow(W);
 title('Extracted Watermark Image');
 imwrite(W,'de-watermarked.jpg','jpg');
+
+% cek perbedaan watermark awal dan watermark hasil ekstrak
+w_awal = imread('target.jpg');
+w_akhir = imread('de-watermarked.jpg');
+err = immse(w_awal, w_akhir);
+fprintf('\n The mean-squared error is %0.4f\n', err);
